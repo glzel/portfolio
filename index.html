@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <h1 class="logo">Personal Portfolio <span class="dot">.</span></h1>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="nav-items">
+                <a href="#home" class="nav-item" onclick="toggleSection('home')">Home</a>
+                <a href="#about" class="nav-item" onclick="toggleSection('about')">About</a>
+                <a href="#experience" class="nav-item" onclick="toggleSection('experience')">Experience</a>
+                <a href="#achievements" class="nav-item" onclick="toggleSection('achievements')">Achievements</a>
+                <a href="#contact" class="nav-item" onclick="toggleSection('contact')">Contact</a>
+            </nav>
+        </header>
+
+        <section id="home" class="background-container">
+            <div class="me">
+                <div class="parallax"></div>
+                <div class="about-me-container" id="about">
+                    <div class="content">
+                        <p>Hello! my name is</p>
+                        <h1><span class="orange-text">Glezel T.</span> <span class="orange-text">Ganuhon</span></h1>
+                        <h3>I'm a BS IT student of North Eastern Mindanao State University-Cagwait Campus</h3>
+
+                        <div class="footerContainer">
+                            <div class="socialIcons">
+                                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                <a href=""><i class="fa-brands fa-google-plus"></i></a>
+                                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="https://scontent.ftdg1-1.fna.fbcdn.net/v/t39.30808-6/377261355_1255905101790353_2613790814099679143_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9c7eae&_nc_eui2=AeH46Ugl2pH11dybQprRDVvc1CMnvoiFysnUIye-iIXKyTf0dxNfR7IIb8FseonJcAXAEwc5pA3KyhDX02eng7ym&_nc_ohc=rrbgVi0FWr0AX-H1JmQ&_nc_ht=scontent.ftdg1-1.fna&cb_e2o_trans=q&oh=00_AfB7ndvmntgYBiYVPXIFgLbbqK7AzIqiisRuwOY3UKSxcg&oe=657F8397" alt="Background Image">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="about-text" class="text-section">
+            <h2>About Me</h2>
+            <p>Name: Glezel Terse Ganuhon</p>
+            <p>Address: Bitaugan East, Cagwait, Surigao del sur</p>
+            <p>Status: Single</p>
+            <p>Age: 18 Years old</p>
+        </div>
+
+        <div id="home-text" class="text-section">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Hello, my name is Glezel and this is my personal portfolio. Here you can find examples of my work and learn more about me.</p>
+        </div>
+
+        <div id="contact-text" class="text-section">
+            <h2>Contact Me</h2>
+            <h3>Email: ganuhonglezel@gmail.com</h3>
+            <h3>Phone number: 09466098325</h3>
+        </div>
+
+        <div id="achievements-text" class="text-section">
+            <h2>Achievements</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, vel maiores! Quas tempore nisi quidem fugit deserunt facilis debitis ea consequuntur, harum cum eos alias voluptatem dignissimos, animi fugiat repudiandae.</p>
+        </div>
+
+        <section id="experience" class="text-section">
+                <h2>Experience</h2>
+                <p>As a beginner in HTML and CSS, I am excited to showcase my growing experience in web development. I am gaining valuable experience and pushing myself to new heights. I am dedicated to learn and improve</p>
+        </section>
+
+
+       
+        <script>
+            function toggleSection(sectionId) {
+                document.getElementById('about-text').style.display = 'none';
+                document.getElementById('home-text').style.display = 'none';
+                document.getElementById('achievements-text').style.display = 'none';
+
+                const selectedSection = document.getElementById(sectionId + '-text') || document.getElementById(sectionId);
+                if (sectionId === 'projects') {
+                    selectedSection.style.display = selectedSection.style.display === 'none' ? 'block' : 'none';
+                } else {
+                    selectedSection.style.display = 'block';
+                }
+            }
+
+            function toggleMenu() {
+                const navItems = document.querySelector('.nav-items');
+                navItems.classList.toggle('show');
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>
